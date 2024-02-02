@@ -1,0 +1,163 @@
+$white: #ffffff;
+$gray-25: #fcfcfd;
+$gray-50: #f9fafb;
+$gray-100: #f3f4f6;
+$gray-200: #e5e7eb;
+$gray-300: #d2d6db;
+$gray-400: #9da4ae;
+$gray-500: #6c737f;
+$gray-600: #4d5761;
+$gray-700: #384250;
+$gray-800: #242e3c;
+$gray-900: #1a2432;
+$brand-25: #deeefe;
+$brand-50: #ccdcff;
+$brand-100: #aec7ff;
+$brand-200: #92b3ff;
+$brand-300: #78a1ff;
+$brand-400: #5f90ff;
+$brand-500: #4880ff;
+$brand-600: #3170ff;
+$brand-700: #1c61ff;
+$brand-800: #0853f5;
+$brand-900: #0a40eb;
+$brand-1000: #0032aa;
+$primary: $brand-500;
+$red-100: #fee7da;
+$red-200: #fec8b6;
+$red-300: #fca391;
+$red-400: #f98075;
+$red-500: #f54848;
+$red-600: #d23442;
+$red-700: #b0243c;
+$red-800: #8e1635;
+$red-900: #750d31;
+$yellow-25: #fffdf4;
+$yellow-50: #fefbe8;
+$yellow-100: #fef7d2;
+$yellow-200: #feeea5;
+$yellow-300: #fce178;
+$yellow-400: #fad456;
+$yellow-500: #f8c020;
+$yellow-600: #d59e17;
+$yellow-700: #b27f10;
+$yellow-800: #8f620a;
+$yellow-900: #774d06;
+$green-25: #f8fef8;
+$green-50: #f1fdf1;
+$green-100: #e4fbe4;
+$green-200: #cbf8cf;
+$green-300: #aaeab7;
+$green-400: #8dd6a3;
+$green-500: #66bb88;
+$green-600: #4aa075;
+$green-700: #338665;
+$green-800: #206c55;
+$green-900: #13594b;
+$purple-100: #ebe7f6;
+$purple-200: #c1b4e4;
+$purple-300: #9d89d4;
+$purple-400: #7e64c7;
+$purple-500: #6444bb;
+$purple-600: #53389b;
+$purple-700: #452e81;
+$purple-800: #39266b;
+$purple-900: #2f2059;
+$gray: $gray-500;
+$brand: $brand-500;
+$red: $red-500;
+$yellow: $yellow-500;
+$green: $green-500;
+$purple: $purple-500;
+
+$theme-colors: (
+  "white": $white,
+  "gray": $gray,
+  "gray-25": $gray-25,
+  "gray-50": $gray-50,
+  "gray-100": $gray-100,
+  "gray-200": $gray-200,
+  "gray-300": $gray-300,
+  "gray-400": $gray-400,
+  "gray-500": $gray-500,
+  "gray-600": $gray-600,
+  "gray-700": $gray-700,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
+  "brand-25": $brand-25,
+  "brand": $brand,
+  "brand-50": $brand-50,
+  "brand-100": $brand-100,
+  "brand-200": $brand-200,
+  "brand-300": $brand-300,
+  "brand-400": $brand-400,
+  "brand-500": $brand-500,
+  "brand-600": $brand-600,
+  "brand-700": $brand-700,
+  "brand-800": $brand-800,
+  "brand-900": $brand-900,
+  "brand-1000": $brand-1000,
+  "red": $red,
+  "red-100": $red-100,
+  "red-200": $red-200,
+  "red-300": $red-300,
+  "red-400": $red-400,
+  "red-500": $red-500,
+  "red-600": $red-600,
+  "red-700": $red-700,
+  "red-800": $red-800,
+  "red-900": $red-900,
+  "yellow": $yellow,
+  "yellow-100": $yellow-100,
+  "yellow-200": $yellow-200,
+  "yellow-300": $yellow-300,
+  "yellow-400": $yellow-400,
+  "yellow-500": $yellow-500,
+  "yellow-600": $yellow-600,
+  "yellow-700": $yellow-700,
+  "yellow-800": $yellow-800,
+  "yellow-900": $yellow-900,
+  "green": $green,
+  "green-100": $green-100,
+  "green-200": $green-200,
+  "green-300": $green-300,
+  "green-400": $green-400,
+  "green-500": $green-500,
+  "green-600": $green-600,
+  "green-700": $green-700,
+  "green-800": $green-800,
+  "green-900": $green-900,
+  "purple": $purple,
+  "purple-100": $purple-100,
+  "purple-200": $purple-200,
+  "purple-300": $purple-300,
+  "purple-400": $purple-400,
+  "purple-500": $purple-500,
+  "purple-600": $purple-600,
+  "purple-700": $purple-700,
+  "purple-800": $purple-800,
+  "purple-900": $purple-900,
+  "error": $red-500,
+  "success": $green-500,
+);
+
+@each $key, $value in $theme-colors {
+  .bg-#{$key} {
+    background-color: #{$value} !important;
+  }
+  .text-#{$key} {
+    color: #{$value} !important;
+  }
+  .bdr-#{$key} {
+    border-color: #{$value} !important;
+  }
+}
+
+:root {
+  @each $name, $color in $theme-colors {
+    --#{$name}: #{$color};
+  }
+
+  --cropper-outline-color: rgba(56, 66, 80, 0.64);
+  --cropper-overlay-color: rgba(56, 66, 80, 0.64);
+}

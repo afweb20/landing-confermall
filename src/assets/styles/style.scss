@@ -1,4 +1,13 @@
-// @import "fonts";
+@import "./helpers/reset";
+@import "./helpers/palette";
+
+@import "./layout/fonts";
+@import "./layout/grid";
+
+@import "./components/buttons";
+
+@import "./sections/header";
+@import "./sections/footer";
 
 body {
   font-family: "Manrope", sans-serif;
