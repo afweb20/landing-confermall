@@ -136,7 +136,7 @@ async function replaceIndexHtml() {
 
 replaceFavicon();
 replaceCss(["landing-confermall"]);
-replaceJs(["landing-confermall", "additional-script"]);
+replaceJs(["landing-confermall"]);
 replaceAssets();
 
 replaceIndexHtml();

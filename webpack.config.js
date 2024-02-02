@@ -78,7 +78,7 @@ module.exports = (env, argv) => {
             {
               loader: "handlebars-loader",
               options: {
-                inlineRequires: "/images/"
+                inlineRequires: "/assets/images/"
               }
             },
             {
