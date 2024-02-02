@@ -9,7 +9,6 @@
     "publish": "webpack --mode=production && npm run postbuild",
     "postbuild": "node postbuild.js"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/afweb20/landing-confermall.git"
@@ -21,9 +20,9 @@
   },
   "homepage": "https://github.com/afweb20/landing-confermall#readme",
   "devDependencies": {
-    "eslint": "^8.48.0",
     "ajv": "^7.2.4",
     "css-loader": "^6.7.2",
+    "eslint": "^8.48.0",
     "favicons": "^7.0.2",
     "favicons-webpack-plugin": "^6.0.0",
     "fs-extra": "^11.1.1",
@@ -38,6 +37,7 @@
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
+    "svgtofont": "^4.1.1",
     "swiper": "^9.4.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.0",

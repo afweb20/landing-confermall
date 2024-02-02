@@ -4,6 +4,23 @@ const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const supportedLangs = require("./src/scripts/supportedLangs");
 
+var svgtofont = require("svgtofont");
+
+svgtofont({
+  src: path.resolve(process.cwd(), "src/assets/font-icons"),
+  dist: path.resolve(process.cwd(), "src/assets/fonts/ConfermallFont"),
+  fontName: "ConfermallFont",
+  classNamePrefix: "fi",
+  css: true,
+  svgicons2svgfont: {
+    fontHeight: 1000,
+    normalize: true
+  }
+}).then(function() {
+  console.log("done!");
+});
+
+
 module.exports = (env, argv) => {
   // argv.mode = "production";
   let config = {
@@ -12,9 +29,14 @@ module.exports = (env, argv) => {
         import: "./src/landing-confermall.js"
       }
     },
+    // output: {
+    //   path: path.resolve(__dirname, "dist"),
+    //   clean: true,
+    // },
     output: {
-      path: path.resolve(__dirname, "dist"),
-      clean: true,
+      filename: argv.mode === "development" ? "[name].js" : "[name].[fullhash].js",
+      path: argv.mode === "development" ? path.resolve(__dirname, "dev") : path.resolve(__dirname, "dist"),
+      chunkFilename: "[name].[fullhash].js"
     },
     module: {
       rules: [

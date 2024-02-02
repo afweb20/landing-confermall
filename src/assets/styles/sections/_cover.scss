@@ -62,4 +62,33 @@
       }
     }
   }
+
+  .bg-icon {
+    font-size: 82px;
+    position: absolute;
+    display: none;
+    align-items: center;
+    width: 184px;
+    height: 184px;
+    border: 1px solid;
+    border-radius: 184px;
+
+    justify-content: center;
+    backdrop-filter: blur(10px);
+
+    @media (min-width: 992px) {
+      display: flex;
+    }
+
+    &--user {
+      top: 0;
+      left: 0;
+      color: $brand;
+      border-color: $brand;
+    }
+    &--hat {
+      color: #ff6400;
+      border-color: #ff6400;
+    }
+  }
 }
