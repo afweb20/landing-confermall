@@ -5,8 +5,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const supportedLangs = require("./src/scripts/supportedLangs");
 
 module.exports = (env, argv) => {
-  return {
-    mode: argv.mode,
+  // argv.mode = "production";
+  let config = {
     entry: {
       "landing-confermall": {
         import: "./src/landing-confermall.js"
@@ -15,20 +15,6 @@ module.exports = (env, argv) => {
     output: {
       path: path.resolve(__dirname, "dist"),
       clean: true,
-    },
-    devServer: {
-      allowedHosts: "all",
-      static: {
-        directory: path.join(__dirname, "./dist"),
-      },
-      compress: true,
-      hot: true,
-      port: 80
-    },
-    performance: {
-      hints: false,
-      maxEntrypointSize: 512000,
-      maxAssetSize: 512000
     },
     module: {
       rules: [
@@ -88,8 +74,25 @@ module.exports = (env, argv) => {
         },
       ]
     },
-    plugins: addPlugins(argv)
+    plugins: addPlugins(argv),
+    mode: argv.mode
   };
+
+  if (argv.mode === "development") {
+    config.devtool = "source-map";
+
+    config.devServer = {
+      historyApiFallback: true,
+      devMiddleware: {
+        writeToDisk: true
+      },
+      compress: true,
+      hot: true,
+      port: 3000
+    };
+  }
+
+  return config;
 };
 
 function addPage(page, lang, chunks=[]) {
