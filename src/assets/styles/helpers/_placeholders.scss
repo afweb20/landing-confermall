@@ -1,0 +1,83 @@
+
+%sHeaderH1 {
+  @include font(700, 32px, 32px);
+
+  @media (min-width: 768px) {
+    @include font(700, 40px, 40px);
+  }
+
+  @media (min-width: 992px) {
+    @include font(700, 64px, 64px);
+
+    letter-spacing: -2px;
+  }
+}
+
+%sHeaderH2 {
+  @include font(500, 48px, 48px);
+
+  letter-spacing: 0;
+}
+
+%sHeaderH3 {
+  @include font(400, 24px, 24px);
+
+  letter-spacing: 0;
+
+  @media (min-width: 768px) {
+    @include font(400, 40px, 40px);
+  }
+}
+
+%sSubHeader {
+  @include font(700, 18px, 24px);
+
+  letter-spacing: 0;
+
+  @media (min-width: 768px) {
+    @include font(700, 22px, 32px);
+  }
+}
+
+%sBigText {
+  @include font(400, 17px, 24px);
+}
+
+%sBigTextBold {
+  @include font(700, 17px, 24px);
+}
+
+%sMainText {
+  @include font(400, 15px, 20px);
+}
+
+%sMainTextBold {
+  @include font(700, 15px, 20px);
+}
+
+%sMainTextBoldCaps {
+  @include font(700, 15px, 20px);
+
+  text-transform: uppercase;
+}
+
+%sLabel {
+  @include font(400, 12px, 16px);
+}
+
+%sLabelLink {
+  @include font(400, 12px, 16px);
+
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+%sLabelSemi {
+  @include font(600, 12px, 16px);
+}
+
+%sLabelExtra {
+  @include font(800, 12px, 16px);
+}

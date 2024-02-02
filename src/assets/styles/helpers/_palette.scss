@@ -156,6 +156,7 @@ $theme-colors: (
 }
 
 :root {
+  --font-family: "Manrope", sans-serif;
   @each $name, $color in $theme-colors {
     --#{$name}: #{$color};
   }

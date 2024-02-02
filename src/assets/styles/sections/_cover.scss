@@ -29,9 +29,9 @@
   }
   &-content {
     position: relative;
-
     @media (min-width: 992px) {
       display: flex;
+      align-items: center;
       flex-direction: row-reverse;
     }
     @media (min-width: 1280px) {
@@ -47,11 +47,19 @@
   }
   &-content-info {
     @media (min-width: 992px) {
-      display: flex;
-      flex-direction: row-reverse;
+      // display: flex;
+      // flex-direction: row-reverse;
     }
   }
   &-content-text {
     color: $black;
+    h1 {
+      font-weight: 400;
+      b {
+        font-weight: 900;
+        display: block;
+        color: $brand;
+      }
+    }
   }
 }

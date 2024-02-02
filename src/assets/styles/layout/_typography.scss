@@ -1,0 +1,60 @@
+h1,
+.h1 {
+  word-break: break-word;
+}
+
+h1,
+.h1 {
+  @extend %sHeaderH1;
+}
+
+h2,
+.h2 {
+  @extend %sHeaderH2;
+}
+
+h3,
+.h3 {
+  @extend %sHeaderH3;
+}
+
+.s-sub-header {
+  @extend %sSubHeader;
+}
+
+.s-big-text {
+  @extend %sBigText;
+}
+.s-big-text-bold {
+  @extend %sBigTextBold;
+}
+
+.s-main-text {
+  @extend %sMainText;
+}
+
+.s-main-text-bold {
+  @extend %sMainTextBold;
+}
+
+.s-main-text-bold-caps {
+  @extend %sMainTextBoldCaps;
+}
+
+.s-label {
+  @extend %sLabel;
+}
+
+.s-label-link {
+  @extend %sLabelLink;
+
+  cursor: pointer;
+}
+
+.s-label-semi {
+  @extend %sLabelSemi;
+}
+
+.s-label-extra {
+  @extend %sLabelExtra;
+}

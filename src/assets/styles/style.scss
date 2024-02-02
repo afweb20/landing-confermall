@@ -1,7 +1,10 @@
 @import "./helpers/reset";
 @import "./helpers/palette";
+@import "./helpers/mixins";
+@import "./helpers/placeholders";
 
 @import "./layout/fonts";
+@import "./layout/typography";
 @import "./layout/grid";
 
 @import "./components/buttons";
