@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script type="text/javascript">
+    var userLang = navigator.language || navigator.userLanguage;
+
+    if (userLang == 'ru' || userLang == 'ru-RU') {
+      window.location.href = '/ru/';
+    } else if (userLang == 'en' || userLang == 'en-US' || userLang == 'en-EN') {
+      window.location.href = '/en/';
+    } else {
+      window.location.href = '/ru/';
+    }
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
